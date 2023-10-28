@@ -28,7 +28,7 @@ def main(directory, target_string, replacement_string):
 if __name__ == "__main__":
     # Set the directory you want to start from
     root_directory = './'  # Replace with your specific directory path
-    old_url = '//v4-upload.goalsites.com/155/image_1527818269_logo.png'
-    new_url = 'media/logo.png'
+    old_url = '//v4-upload.goalsites.com/155/image_1528539161_weixin.png'
+    new_url = 'media/weixin.png'
 
     main(root_directory, old_url, new_url)
