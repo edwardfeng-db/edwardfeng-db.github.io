@@ -28,7 +28,7 @@ def find_urls_download_replace(html_content, base_url, html_file_path):
             filename = download_file(full_url)
             print(f"Downloaded '{filename}' from '{full_url}'")
 
-            if (filename != "index.html"):
+            if ("index.html" not in filename):
                 filename = "../" + filename
             # Replace the URL with the local file name in the content
             new_content = new_content.replace(partial_url, filename)
