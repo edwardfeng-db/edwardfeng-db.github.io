@@ -16,7 +16,7 @@ def main(directory, target_string, replacement_string):
     # Walk through the directory structure
     for dirpath, dirnames, filenames in os.walk(directory):
         for filename in filenames:
-            if filename.endswith('.html'):  # Check for .html files
+            if filename.endswith('.html') and "index.html" not in filename:  # Check for .html files
                 # Construct the path to the file
                 file_path = os.path.join(dirpath, filename)
 
@@ -28,7 +28,7 @@ def main(directory, target_string, replacement_string):
 if __name__ == "__main__":
     # Set the directory you want to start from
     root_directory = './'  # Replace with your specific directory path
-    old_url = '//v4-upload.goalsites.com/155/image_1528539161_weixin.png'
-    new_url = 'media/weixin.png'
+    old_url = 'media/weixin.png'
+    new_url = '../media/weixin.png'
 
     main(root_directory, old_url, new_url)
